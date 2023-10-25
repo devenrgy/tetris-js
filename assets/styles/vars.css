@@ -1,0 +1,13 @@
+:root {
+  --black: #000;
+  --background: #0c0c0c;
+  --playfield-bg: #151515;
+  --white: #fff;
+  --white-transparent: rgb(255, 255, 255, 70%);
+
+  --border: 6px solid var(--white);
+
+  --title-font: 'Elbow-ado', 'sans-serif';
+  --main-font: 'Jura', 'sans-serif';
+  --second-font: 'Quantico', 'sans-serif';
+}

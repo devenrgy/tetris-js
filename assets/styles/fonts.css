@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Elbow-ado';
+    src: url('../fonts/Elbow-ado.woff2') format('woff2'),
+        url('../fonts/Elbow-ado.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jura';
+  src: url('../fonts/Jura-Bold.woff2') format('woff2'),
+      url('../fonts/Jura-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quantico';
+  src: url('../fonts/Quantico-Bold.woff2') format('woff2'),
+      url('../fonts/Quantico-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

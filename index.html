@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris Game</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/icons/favicon/site.webmanifest">
+  <link href="assets/app.css" rel="stylesheet">
+</head>
+
+<body>
+
+<main class="game game--main">
+  <header class="game__header header">
+    <h1 class="header__title">Tetris Game</h1>
+  </header>
+
+  <div class="game__playfield playfield game__playfield--paused">
+    <canvas id="playfield" class="playfield__canvas"></canvas>
+  </div>
+
+  <aside class="game__aside aside">
+    <header class="aside__header">
+      <div class="aside__controls-help controls-help hidden">
+        <div class="controls-help__close">
+          <button class="controls-help__close-btn">Close controls help</button>
+        </div>
+
+        <h2 class="title controls-help__title">Controls</h2>
+
+        <ul class="controls-help__list">
+          <li class="controls-help__item">
+            <div class="controls-help__btns">
+              <div class="controls-help__btn">
+                <img src="./assets/icons/ArrowRight.svg" alt="Arrow Right" width="12" height="12">
+              </div>
+              <div class="controls-help__btn">
+                <img src="./assets/icons/ArrowDown.svg" alt="Arrow Down" width="12" height="12">
+              </div>
+              <div class="controls-help__btn">
+                <img src="./assets/icons/ArrowLeft.svg" alt="Arrow Left" width="12" height="12">
+              </div>
+            </div>
+            Move
+          </li>
+          <li class="controls-help__item">
+            <div class="controls-help__btn">
+              <img src="./assets/icons/ArrowUp.svg" alt="Arrow Up" width="12" height="12">
+            </div>
+            Rotate
+          </li>
+          <li class="controls-help__item">
+            <div class="controls-help__btn">
+              <img src="./assets/icons/Space.svg" alt="Space" width="12" height="12">
+            </div>
+            Drop
+          </li>
+        </ul>
+      </div>
+
+      <div class="aside__content">
+        <div class="aside__preview preview">
+          <h2 class="preview__title title">Next</h2>
+          <canvas id="preview" class="preview__canvas" width="96" height="96"></canvas>
+        </div>
+        <div class="aside__score score">
+          <h2 class="score__title title">Score</h2>
+          <p class="score__text">0</p>
+        </div>
+        <div class="aside__lines lines">
+          <h2 class="lines__title title">Lines</h2>
+          <p class="lines__text">0</p>
+        </div>
+        <div class="aside__level level">
+          <h2 class="level__title title">Level</h2>
+          <p class="level__text">0</p>
+        </div>
+      </div>
+
+    </header>
+    <footer class="aside__footer">
+      <div class="aside__controls controls">
+        <button class="controls__btn">play<span class="dash">_</span></button>
+
+        <ul class="controls__list">
+          <li class="controls__item">
+            <button id="volume-btn"
+                    class="controls__list-btn controls__list-btn--volume-icon">
+              Volume
+            </button>
+          </li>
+          <li class="controls__item">
+            <button id="controls-btn" class="controls__list-btn controls__list-btn--controls-icon">Controls</button>
+          </li>
+          <li class="controls__item">
+            <button id="records-btn" class="controls__list-btn controls__list-btn--records-icon">Records</button>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </aside>
+</main>
+
+<div class="overlay hidden">
+  <div class="game records hidden">
+    <header class="game__header header">
+      <h1 class="header__title">Records</h1>
+    </header>
+
+    <div class="records__close">
+      <button class="records__close-btn">Close records</button>
+    </div>
+
+    <table class="records__table">
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="game gameover hidden">
+    <header class="game__header header">
+      <h1 class="header__title">Game Over</h1>
+    </header>
+
+    <div class="gameover__content">
+      <div class="gameover__scores">
+        <p class="gameover__title">Your score</p>
+        <p class="gameover__text">0</p>
+      </div>
+
+      <form class="gameover__form">
+        <input class="gameover__input" type="text" placeholder="Type you name" name="username"
+               autocomplete="off">
+        <button class="gameover__btn">save<span class="dash">_</span></button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <ul class="footer__list">
+      <li class="footer__item"><a class="footer__link" href="https://github.com/devenrgy" target="_blank">
+        2023 | Alex
+      </a></li>
+      <li class="footer__item">
+        <a class="footer__link" href="https://rs.school/js-stage0/" target="_blank">
+          <img src="assets/icons/rs-logo.svg" width="100" alt="RSSchool website">
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<script type="module" src="assets/app.js"></script>
+</body>
+
+</html>

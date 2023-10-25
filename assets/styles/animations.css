@@ -1,0 +1,14 @@
+@keyframes ticker {
+  to {
+    background-position: center -100%;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
